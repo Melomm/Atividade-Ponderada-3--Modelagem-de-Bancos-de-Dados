@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<sql>
+<datatypes db="mysql">
+    <group label="Numeric" color="rgb(238,238,170)">
+      <type label="Integer" length="0" sql="INTEGER" quote=""/>
+    </group>
+    <group label="Character" color="rgb(255,200,200)">
+      <type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+      <type label="Text" length="0" sql="TEXT" quote="'"/>
+    </group>
+    <group label="Enumerated" color="rgb(200,200,255)">
+      <type label="Enum" length="0" sql="ENUM" quote="'"/>
+    </group>
+    <group label="Date &amp; Time" color="rgb(200,255,200)">
+      <type label="Date" length="0" sql="DATE" quote="'"/>
+    </group>
+  </datatypes><table x="481" y="390" name="Autores">
+<row name="AutorID" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Nome" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="Contato" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+</table>
+<table x="672" y="204" name="Usuarios">
+<row name="UsuarioID" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Email" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="Senha" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="Tipo" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>'Usuario'</default></row>
+</table>
+<table x="41" y="207" name="Manuais">
+<row name="ManualID" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Titulo" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="Descricao" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+</table>
+<table x="295" y="169" name="Versoes">
+<row name="VersaoID" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="ManualID" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="Manuais" row="ManualID" />
+</row>
+<row name="Data" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NumeroVersao" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<row name="AutorID" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="Autores" row="AutorID" />
+</row>
+</table>
+<table x="481" y="106" name="Favoritos">
+<row name="UsuarioID" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="Usuarios" row="UsuarioID" />
+</row>
+<row name="VersaoID" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="Versoes" row="VersaoID" />
+</row>
+</table>
+</sql>
