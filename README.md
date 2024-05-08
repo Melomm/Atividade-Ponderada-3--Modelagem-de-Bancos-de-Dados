@@ -50,6 +50,6 @@ Permite aos usuários marcar versões específicas de manuais como favoritas.
 
 ## Relacionamentos
 
-- **Autores-Versoes**: Relação 1:N entre Autores e Versoes, indicando que um autor pode escrever várias versões, mas cada versão possui apenas um autor.
-- **Manuais-Versoes**: Relação 1:N entre Manuais e Versoes, demonstrando que um manual pode ter várias versões.
+- **Autores-Versões**: Relação 1:N entre Autores e Versoes, indicando que um autor pode escrever várias versões, mas cada versão possui apenas um autor.
+- **Manuais-Versões**: Relação 1:N entre Manuais e Versoes, demonstrando que um manual pode ter várias versões.
 - **Usuarios-Favoritos**: Relação N:N entre Usuarios e Versoes, facilitada pela tabela Favoritos, permitindo que usuários possam favoritar múltiplas versões.
